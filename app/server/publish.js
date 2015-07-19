@@ -8,3 +8,7 @@
 Meteor.publish('locations', function (/* args */) {
   return Locations.find();
 });
+
+Meteor.publish('cars', function (/* args */) {
+  return Cars.find();
+});

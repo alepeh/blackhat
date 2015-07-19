@@ -17,3 +17,10 @@ Router.route('/locations/create', {
   action: 'create',
   where: 'client'
 });
+
+Router.route('/inspection_reports/create', {
+  name: 'createInspectionReport',
+  controller: 'InspectionReportsController',
+  action: 'create',
+  where: 'client'
+});
