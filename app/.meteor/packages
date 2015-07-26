@@ -9,3 +9,5 @@ iron:router
 aldeed:autoform
 aldeed:collection2
 twbs:bootstrap
+aldeed:autoform-bs-datepicker
+rajit:bootstrap3-datepicker
