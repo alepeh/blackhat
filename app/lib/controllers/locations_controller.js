@@ -19,5 +19,9 @@ LocationsController = RouteController.extend({
   
   create: function(){
     this.render('CreateLocation', {});
+  },
+
+  list: function() {
+    this.render('ListLocations', {});
   }
 });

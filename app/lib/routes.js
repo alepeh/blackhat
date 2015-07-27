@@ -11,6 +11,13 @@ Router.route('/', {
   where: 'client'
 });
 
+Router.route('/locations', {
+  name: 'listLocations',
+  controller: 'LocationsController',
+  action: 'list',
+  where: 'client'
+});
+
 Router.route('/locations/create', {
   name: 'createLocation',
   controller: 'LocationsController',

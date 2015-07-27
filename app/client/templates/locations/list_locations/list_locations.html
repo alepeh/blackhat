@@ -1,0 +1,19 @@
+<template name="ListLocations">
+<h1>Objekte</h1>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Ort</th>
+        <th>Straße</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each locations}}
+        <tr>
+            <td>{{city}}</td>
+            <td>{{street}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+</template>
