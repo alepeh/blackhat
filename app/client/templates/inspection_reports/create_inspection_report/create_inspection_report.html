@@ -1,4 +1,13 @@
 <template name="CreateInspectionReport">
-  <h1>Neuer Inspektionsbericht</h1>
-    {{> quickForm collection="InspectionReports" id="insertInspectionReportForm" type="insert" buttonContent="Create"}}
+    <h1>Neuer Inspektionsbericht</h1>
+    <!--{{> quickForm collection="InspectionReports" id="insertInspectionReportForm" type="insert" buttonContent="Create"}}-->
+    {{#autoForm collection="InspectionReports" id="insertInspectionReportForm" type="insert"}}
+        <fieldset>
+
+            {{> afQuickField name='location.street' value=selectedLocation.street}}
+
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Insert</button>
+    {{/autoForm}}
 </template>

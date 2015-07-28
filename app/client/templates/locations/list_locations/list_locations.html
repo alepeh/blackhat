@@ -5,6 +5,7 @@
     <tr>
         <th>Ort</th>
         <th>Straße</th>
+        <th>Aktionen</th>
     </tr>
     </thead>
     <tbody>
@@ -12,6 +13,13 @@
         <tr>
             <td>{{city}}</td>
             <td>{{street}}</td>
+            <td>
+            {{#linkTo route="createInspectionReport"}}
+                <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Befund
+                </button>
+            {{/linkTo}}
+            </td>
         </tr>
     {{/each}}
     </tbody>

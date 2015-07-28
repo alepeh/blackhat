@@ -2,6 +2,10 @@
 /* ListLocations: Event Handlers */
 /*****************************************************************************/
 Template.ListLocations.events({
+    'click button': function(){
+        Session.set('location', this);
+        console.log(Session.get('location'));
+    }
 });
 
 /*****************************************************************************/

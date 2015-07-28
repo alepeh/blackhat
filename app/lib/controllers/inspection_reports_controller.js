@@ -9,7 +9,7 @@ InspectionReportsController = RouteController.extend({
     // the subscription handle is added to a reactive list
     // and when all items in this list are ready, this.ready()
     // returns true in any of your route functions.
-    this.subscribe('inspection_reports')
+    this.subscribe('inspection_reports');
   },
 
   data: function () {
