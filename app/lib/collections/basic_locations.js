@@ -21,6 +21,7 @@ Contact = new SimpleSchema({
     firstname: {
         type: String,
         label: "Vorname",
+        optional: true,
         max: 100
     },
     lastname: {
@@ -32,6 +33,7 @@ Contact = new SimpleSchema({
     phone: {
         type: String,
         label: "Telefon",
+        optional: true,
         max: 30
     },
     email: {
@@ -46,25 +48,30 @@ Location = new SimpleSchema({
     city: {
         type: String,
         label: "Ort",
+        optional: true,
         max: 100
     },
     street: {
         type: String,
         label: "Straße",
+        optional: true,
         max: 100
     },
     number: {
         type: String,
         label: "Nummer",
+        optional: true,
         max: 50
     },
     contact: {
         type: Contact,
+        optional: true,
         label: "Kontakt"
     },
     authority: {
         type: String,
         label: "Gemeindeamt",
+        optional: true,
         max: 100
     }
 });

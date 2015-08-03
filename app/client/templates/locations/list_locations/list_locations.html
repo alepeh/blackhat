@@ -5,6 +5,11 @@
     <tr>
         <th>Ort</th>
         <th>Straße</th>
+        <th>Nummer</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Telefon</th>
+        <th>email</th>
         <th>Aktionen</th>
     </tr>
     </thead>
@@ -13,10 +18,15 @@
         <tr>
             <td>{{city}}</td>
             <td>{{street}}</td>
+            <td>{{number}}</td>
+            <td>{{contact.firstname}}</td>
+            <td>{{contact.lastname}}</td>
+            <td>{{contact.phone}}</td>
+            <td>{{contact.email}}</td>
             <td>
             {{#linkTo route="createInspectionReport"}}
                 <button type="button" class="btn btn-default btn-sm">
-                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Befund
+                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Befundaufnahme
                 </button>
             {{/linkTo}}
             </td>

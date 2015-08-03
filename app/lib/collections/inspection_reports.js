@@ -155,7 +155,8 @@ InspectionReports.attachSchema(new SimpleSchema({
             afFieldInput: {
                 type: "bootstrap-datepicker"
             }
-        }
+        },
+        optional: true
     },
     location: {
         type: Location,
@@ -171,7 +172,8 @@ InspectionReports.attachSchema(new SimpleSchema({
     },
     abnahmebefund: {
         type: Abnahmebefund,
-        label: "Abnahmebefund"
+        label: "Abnahmebefund",
+        optional: true
     }
 }));
 

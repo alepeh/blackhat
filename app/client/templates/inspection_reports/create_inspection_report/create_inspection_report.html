@@ -1,13 +1,37 @@
 <template name="CreateInspectionReport">
-    <h1>Neuer Inspektionsbericht</h1>
+    <h1>Neuer Befund</h1>
+    <div>
+        {{#autoForm collection="InspectionReports" id="insertInspectionReportForm" type="insert"}}
+            <fieldset>
+            <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation"><a href="#objekt" aria-controls="objekt" role="tab" data-toggle="tab">Objekt</a></li>
+            <li role="presentation" class="active"><a href="#abgasanlage" aria-controls="abgasanlage" role="tab" data-toggle="tab">Abgasanlage</a></li>
+            <li role="presentation"><a href="#feuerstaette" aria-controls="feuerstaette" role="tab" data-toggle="tab">Feuerstätte</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane" id="objekt">
+
+                        {{> afQuickField name='location.city' value=selectedLocation.city}}
+                        {{> afQuickField name='location.street' value=selectedLocation.street}}
+                        {{> afQuickField name='location.number' value=selectedLocation.number}}
+                        {{> afQuickField name='location.contact.firstname' value=selectedLocation.contact.firstname}}
+                        {{> afQuickField name='location.contact.lastname' value=selectedLocation.contact.lastname}}
+                        {{> afQuickField name='location.contact.phone' value=selectedLocation.contact.phone}}
+                        {{> afQuickField name='location.contact.email' value=selectedLocation.contact.email}}
+            </div>
+            <div role="tabpanel" class="tab-pane active" id="abgasanlage">
+                        {{> afQuickField name='chimney' }}
+            </div>
+            <div role="tabpanel" class="tab-pane" id="feuerstaette">
+                        {{> afQuickField name='heating_unit' }}
+            </div>
+        </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Insert</button>
+        {{/autoForm}}
+    </div>
     <!--{{> quickForm collection="InspectionReports" id="insertInspectionReportForm" type="insert" buttonContent="Create"}}-->
-    {{#autoForm collection="InspectionReports" id="insertInspectionReportForm" type="insert"}}
-        <fieldset>
-
-            {{> afQuickField name='location.street' value=selectedLocation.street}}
-
-        </fieldset>
-
-        <button type="submit" class="btn btn-primary">Insert</button>
-    {{/autoForm}}
 </template>
