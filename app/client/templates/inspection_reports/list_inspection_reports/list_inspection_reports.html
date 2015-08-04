@@ -1,0 +1,35 @@
+<template name="ListInspectionReports">
+  <h1>Befunde</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Ort</th>
+            <th>Straße</th>
+            <th>Nummer</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <th>Telefon</th>
+            <th>email</th>
+            <th>Aktionen</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each inspection_reports}}
+            <tr>
+                <td>{{location.city}}</td>
+                <td>{{location.street}}</td>
+                <td>{{location.number}}</td>
+                <td>{{location.contact.firstname}}</td>
+                <td>{{location.contact.lastname}}</td>
+                <td>{{location.contact.phone}}</td>
+                <td>{{location.contact.email}}</td>
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Kaminbefund
+                    </button>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>

@@ -9,7 +9,6 @@ Template.CreateInspectionReport.events({
 /*****************************************************************************/
 Template.CreateInspectionReport.helpers({
     selectedLocation: function(){
-        console.log("Fetching selected location");
         return Session.get('location');
     }
 });

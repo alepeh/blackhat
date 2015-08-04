@@ -25,6 +25,13 @@ Router.route('/locations/create', {
   where: 'client'
 });
 
+Router.route('/inspection_reports', {
+  name: 'listInspectionReports',
+  controller: 'InspectionReportsController',
+  action: 'list',
+  where: 'client'
+});
+
 Router.route('/inspection_reports/create', {
   name: 'createInspectionReport',
   controller: 'InspectionReportsController',
